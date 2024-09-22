@@ -81,6 +81,7 @@ graph TD
 - [**Robbe Caerts**](https://github.com/RobbeCaerts): Fullstack Developer
 - [**Valdemar Kobelis**](https://github.com/ValdemarKobelis): Fullstack Developer
 - [**David Dževeckij**](https://github.com/dzeveckij): Fullstack Developer
+- [**Matas Andraitis**](https://github.com/Matas5): Fullstack Developer
 
 ## Contributing
 
