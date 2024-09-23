@@ -76,6 +76,51 @@ graph TD
     end
 ```
 
+## Entity-Relationship Diagram
+
+```mermaid
+
+erDiagram
+    users {
+        integer id PK
+        varchar username
+        varchar email
+        varchar password_hash
+        timestamp last_login
+    }
+
+    game {
+        integer GameID PK
+        integer UserID FK
+        varchar GameMode
+        datetime StartTime
+        datetime EndTime
+        integer Score
+    }
+
+    game_question {
+        integer GameID FK
+        integer QuestionID
+        integer QuestionOrder
+        varchar QuestionText
+        varchar Answer
+        int Difficulty
+    }
+
+    leaderboard {
+        integer LeaderboardID PK
+        integer UserID FK
+        varchar GameMode
+        integer Score
+        timestamp AchievedAt
+    }
+
+    users ||--o{ game : "starts"
+    game ||--o{ game_question : "includes"
+    users ||--o{ leaderboard : "participates"
+    game ||--|{ leaderboard : "tracked in"
+
+```
 ## Team Members
 
 - [**Robbe Caerts**](https://github.com/RobbeCaerts): Fullstack Developer
